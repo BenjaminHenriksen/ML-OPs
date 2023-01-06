@@ -17,6 +17,13 @@ class mnist(Dataset):
         self.out_folder = out_folder
         self.train = train
 
+        if self.out_folder:
+            try:
+                self.load_preprocessed()
+                return
+            except FileNotFoundError:
+                pass
+
         if self.train:
             content = []
             for i in range(4):
@@ -39,6 +46,10 @@ class mnist(Dataset):
     def load_preprocessed(self) -> None:
         split = "train" if self.train else "test"
         self.data, self.targets = torch.load(f"{self.out_folder}/{split}_processed.pt")
+
+    def save_preprocessed(self) -> None:
+        split = "train" if self.train else "test"
+        torch.save([self.data, self.targets], f"{self.out_folder}/{split}_processed.pt")
     
     def __len__(self) -> int:
         return self.targets.numel()

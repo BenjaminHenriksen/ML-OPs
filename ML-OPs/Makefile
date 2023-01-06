@@ -7,7 +7,7 @@
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 BUCKET = [OPTIONAL] your-bucket-for-syncing-data (do not include 's3://')
 PROFILE = default
-PROJECT_NAME = ML-OPs
+PROJECT_NAME = MNIST_project_rep
 PYTHON_INTERPRETER = python3
 
 ifeq (,$(shell which conda))
@@ -36,7 +36,7 @@ clean:
 
 ## Train model
 train:
-	$(pip install -e ) src/models/train_model.py
+	$(PYTHON_INTERPRETER) src/models/train_model.py
 
 ## Lint using flake8
 lint:
