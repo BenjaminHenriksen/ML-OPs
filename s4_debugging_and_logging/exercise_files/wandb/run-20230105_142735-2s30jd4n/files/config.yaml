@@ -1,0 +1,54 @@
+wandb_version: 1
+
+DEVICE:
+  desc: null
+  value: cuda
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.7
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.10.8
+    start_time: 1672925255.306852
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.10.8
+      5: 0.13.7
+      8:
+      - 5
+batch_size:
+  desc: null
+  value: 100
+cuda:
+  desc: null
+  value: false
+dataset_path:
+  desc: null
+  value: datasets
+epochs:
+  desc: null
+  value: 6
+hidden_dim:
+  desc: null
+  value: 400
+latent_dim:
+  desc: null
+  value: 20
+lr:
+  desc: null
+  value: 0.001
+x_dim:
+  desc: null
+  value: 784

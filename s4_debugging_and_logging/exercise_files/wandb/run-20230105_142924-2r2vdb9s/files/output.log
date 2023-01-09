@@ -1,0 +1,9 @@
+
+Start training VAE...
+	Epoch 1 complete! 	Average Loss:  156.9265978779737
+	Epoch 2 complete! 	Average Loss:  118.47786400185204
+	Epoch 3 complete! 	Average Loss:  113.05168704024938
+	Epoch 4 complete! 	Average Loss:  110.5860069353871
+	Epoch 5 complete! 	Average Loss:  109.11864130647433
+	Epoch 6 complete! 	Average Loss:  108.13900807987271
+Finish!!
