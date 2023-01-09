@@ -6,7 +6,7 @@ from src.models.model import MyAwesomeModel
 import pytest
 
 
-## import the train and test data
+## import the train and test data #
 train_data = mnist(train=True, in_folder=_PATH_DATA + "/raw", out_folder=_PATH_DATA + "/processed")
 test_data = mnist(train=False, in_folder=_PATH_DATA + "/raw", out_folder=_PATH_DATA + "/processed")
 
