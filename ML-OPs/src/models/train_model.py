@@ -22,6 +22,7 @@ def training() -> None:
     model = model.to(device)
 
     train_set = mnist(train=True, in_folder="data/raw/corruptmnist", out_folder="data/processed")
+    test_set = mnist(train=False, in_folder="data/raw/corruptmnist", out_folder="data/processed")
     dataloader = torch.utils.data.DataLoader(train_set, batch_size=128)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
     criterion = torch.nn.CrossEntropyLoss()

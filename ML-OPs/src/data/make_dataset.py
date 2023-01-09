@@ -26,13 +26,13 @@ class mnist(Dataset):
 
         if self.train:
             content = []
-            for i in range(4):
-                content.append(np.load(f"{in_folder}/corruptmnist/train_{i}.npz", allow_pickle=True))
+            for i in range(5):
+                content.append(np.load(f"{in_folder}/train_{i}.npz", allow_pickle=True))
 
             data = torch.tensor(np.concatenate([c["images"] for c in content])).reshape(-1, 1, 28, 28)
             targets = torch.tensor(np.concatenate([c["labels"] for c in content]))
         else:
-            content = np.load(f"{in_folder}/corruptmnist/test.npz", allow_pickle=True)
+            content = np.load(f"{in_folder}/test.npz", allow_pickle=True)
             data = torch.tensor(content["images"]).reshape(-1, 1, 28, 28)
             targets = torch.tensor(content["labels"])
 
