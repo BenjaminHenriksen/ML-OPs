@@ -78,6 +78,12 @@ target/
 # exclude data from source control by default
 /data/
 
+# exclude google-cloud-sdk from source control by default
+/google-cloud-sdk/
+
+# exclude google-cloud-cli-412.0.0-linux-x86_64.tar.gz
+/google-cloud-cli-412.0.0-linux-x86_64.tar.gz
+
 # Mac OS-specific storage files
 .DS_Store
 
