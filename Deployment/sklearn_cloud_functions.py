@@ -18,6 +18,8 @@ knn = KNeighborsClassifier()
 knn.fit(iris_X_train, iris_y_train)
 knn.predict(iris_X_test)
 
+print(iris_X_test)
+
 # save model
 import pickle
 with open('model.pkl', 'wb') as file:
